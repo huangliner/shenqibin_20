@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--4.28-->
+		<!--<script>
+			function CC() {
+				var A=0;
+				for (var i=0;i<arguments.length;i++) {
+					A+=arguments[i];
+				}
+				return A;							
+			}
+			alert(CC.call(Math, 2, 4)); 
+			alert(CC.apply(Math, [2, 4]));
+			
+			
+			var B=[1,4,2,6,8,0];
+			Math.max.apply(Math,B)
+		</script>-->
+		
+		
+		
+		<script>
+			//5.6
+			function a(name,age,job) {
+				this.name = name;
+				this.age = age;
+				this.job = job;
+				this.sayHi = function() {
+					console.log("我叫" + this.name + "，" + "今年" + this.age +',' + "是一名" + this.job);
+				}
+			}
+			var user = new a('申其斌', 18, '学生');
+			
+			user.sayHi();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
