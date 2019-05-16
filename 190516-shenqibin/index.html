@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font: normal 14px "黑体";
+				color: #eeeeee;
+			}
+			ul {
+				list-style-type: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			#box1 {
+				width: 400px;
+				height: 190px;
+				margin: 300px auto;
+				background: black;
+			}
+			#box1-1 {
+				height: 40px;
+			}
+			#box1-1 li {
+				display: block;
+				float: left;
+				width: 100px;
+				line-height: 30px;
+				text-align: center;
+				background-color: #666666;
+			}
+			#box1-1 li:hover {
+				cursor: pointer;
+				color: white;
+			}
+			#box1-1 li.active {
+				background-color: black;
+			}
+			#box1 div {}
+			#box1 div li {
+				height: 30px;
+				line-height: 30px;
+				text-indent: 8px;
+			}
+			.a {
+				display: block;
+			}
+			.b {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="box1">
+			<ul id="box1-1">
+				<li class="active">今日笔记</li>
+				<li>合作播报</li>
+				<li>国家新闻</li>
+				<li>节日笔记</li>
+			</ul>
+			<div>
+				<ul>
+					<li><a href="javascript:;">实例成员：在构造函数中通过this添加或原型添加的属性和方法</a></li>
+					<li><a href="javascript:;">静态成员：给函数对象添加的属性和方法</a></li>
+					<li><a href="javascript:;">实例成员，只能由实例化的对象来访问 </a></li>
+					<li><a href="javascript:;">静态成员，只能由构造函数本身来访问 </a></li>
+				</ul>
+			</div>
+			<div class="b">
+				<ul>
+					
+				</ul>
+			</div>
+			<div class="b">
+				<ul>
+					<li><a href="javascript:;">肯尼亚总统访华后消失？真相原来是这样</a></li>
+					<li><a href="javascript:;">美方一意孤行搞“极限施压” 中方对贸易战会“奉陪到底”</a></li>
+					<li><a href="javascript:;">首桩！美国普通公民状告特朗普和国会让政府关门违宪/a></li>
+					<li><a href="javascript:;">空中肉搏！俄罗斯战机近距离拦截美国无人机</a></li>
+				</ul>
+			</div>
+			<div class="b">
+				<ul>
+					<li><a href="javascript:;">实例成员：在构造函数中通过this添加或原型添加的属性和方法</a></li>
+					<li><a href="javascript:;">静态成员：给函数对象添加的属性和方法</a></li>
+					<li><a href="javascript:;">实例成员，只能由实例化的对象来访问 </a></li>
+					<li><a href="javascript:;">静态成员，只能由构造函数本身来访问 </a></li>
+				</ul>
+			</div>
+
+			<script>
+				function getTad() {
+					var a1 = document.getElementById("box1-1");
+					var a2 = a1.getElementsByTagName("li");
+					var a3 = document.getElementById("box1");
+					var a4 = a3.getElementsByTagName("div");
+					for (var i = 0; i < a2.length; i++) {
+						a2[i].index = i;
+						a2[i].onmouseover = function() {
+							for (var i = 0; i < a2.length; i++) {
+								a2[i].className = "";
+							}
+							this.className = "active";
+							for (var j = 0; j < a4.length; j++) {
+								a4[j].className = "b";
+							}
+							a4[this.index].className = "a";
+						}
+					}
+				}
+				getTad();
+			</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
